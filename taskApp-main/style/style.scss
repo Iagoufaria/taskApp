@@ -1,0 +1,22 @@
+$primaryColor : #3ff357a9;
+$secondaryColor : #eeffff;
+$buttonColor : #ffffff;
+$hoverColor : #a1e7d1;
+
+
+//imports
+@import './header';
+@import './login';
+@import './taskList';
+@import './cadastro';
+
+
+
+
+body {
+    background-image: linear-gradient(to left,rgb(255, 255, 255),rgb(124, 236, 124));
+    font-weight: bold;
+ 
+
+  
+}

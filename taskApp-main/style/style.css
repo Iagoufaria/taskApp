@@ -1,0 +1,465 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+  color: rgb(0, 0, 0);
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 24px;
+  letter-spacing: 3px;
+  color: rgb(0, 0, 0);
+}
+
+.logo > img {
+  margin-top: -20px;
+}
+
+#logoImg {
+  width: 50px;
+  height: 40px;
+  margin-right: -20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(63, 243, 87, 0.662745098);
+  height: 8vh;
+  box-shadow: 1px 1px 10px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  z-index: 2;
+}
+
+.nav-list li {
+  letter-spacing: 2px;
+  margin-left: 32px;
+  margin-top: 1rem;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background-color: white;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 40vw;
+    height: 92vh;
+    background-color: rgba(63, 243, 87, 0.662745098);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#loginForm {
+  width: 80%; /* Largura ajustada */
+  max-width: 700px; /* Largura máxima */
+  margin: 200px auto; /* Centralizado vertical e horizontalmente */
+  background-color: rgba(63, 243, 87, 0.662745098);
+  padding: 40px; /* Reduzido para não ocupar muito espaço */
+  border-radius: 30px;
+  box-shadow: 1px 1px 20px;
+  text-align: center; /* Centralizar o texto */
+}
+
+.btn.btn-primary {
+  width: 100%; /* Largura total */
+  margin-top: 20px; /* Espaçamento superior ajustado */
+  background-color: #ffffff;
+  color: black;
+  border-style: none;
+}
+
+.btn.btn-primary:hover {
+  opacity: 0.7;
+}
+
+#inputEmail3,
+#inputPassword3 {
+  width: 100%; /* Largura total */
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
+  margin-bottom: 20px; /* Espaçamento inferior ajustado */
+}
+
+@media (max-width: 768px) {
+  /* Estilos adicionais para telas menores */
+  #loginForm {
+    padding: 20px; /* Reduz o padding para telas menores */
+  }
+  .btn.btn-primary {
+    margin-top: 15px; /* Espaçamento superior ajustado */
+  }
+}
+#loginForm > div:nth-child(1) > label,
+#loginForm > div:nth-child(2) > label,
+#loginForm > div:nth-child(3) > div > div > label {
+  color: rgb(0, 0, 0);
+}
+
+#loginForm > div:nth-child(3) > div > div > label {
+  margin-left: -60%;
+}
+
+h1 {
+  font-size: 5vw; /* Tamanho da fonte responsivo */
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-bottom: 3vw; /* Espaçamento inferior responsivo */
+  color: rgb(0, 0, 0);
+}
+
+div#listAll {
+  background-color: rgba(63, 243, 87, 0.662745098);
+  margin-top: 2vw; /* Espaçamento superior responsivo */
+  width: 100%; /* Largura ajustada */
+  max-width: 1000px; /* Largura máxima */
+  padding: 5vw; /* Padding responsivo */
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5vw; /* Bordas arredondadas responsivas */
+  text-align: center;
+  box-shadow: 0.5vw 0.5vw 2vw rgba(0, 0, 0, 0.3); /* Sombra responsiva */
+}
+
+#inputTask {
+  margin-left: 3vw; /* Margem esquerda responsiva */
+  margin-top: 3vw; /* Margem superior responsiva */
+  border-style: none;
+  border-radius: 2vw; /* Bordas arredondadas responsivas */
+  width: 50%; /* Largura ajustada */
+  max-width: 1000px; /* Largura máxima */
+  height: 3vw; /* Altura responsiva */
+  font-size: 1vw; /* Tamanho da fonte responsivo */
+  padding: 2vw; /* Padding responsivo */
+  outline-style: none;
+  box-shadow: 0.5vw 0.5vw 2vw rgba(0, 0, 0, 0.3); /* Sombra responsiva */
+}
+
+#addTaskButton {
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(63, 243, 87, 0.662745098);
+  width: 5vw; /* Largura responsiva */
+  height: 5vw; /* Altura responsiva */
+}
+
+#detailsButton {
+  border-style: none;
+  height: 50%;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+span {
+  font-size: 2vw; /* Tamanho da fonte responsivo */
+}
+
+li#taskAdd {
+  display: flex;
+  justify-content: space-between;
+  width: 90%; /* Largura ajustada */
+  max-width: 800px; /* Largura máxima */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3vw; /* Margem superior responsiva */
+  background-color: #eeffff;
+  padding: 2vw; /* Padding responsivo */
+  align-items: center;
+  border-radius: 5vw; /* Bordas arredondadas responsivas */
+  box-shadow: 0.5vw 0.5vw 2vw rgba(0, 0, 0, 0.3); /* Sombra responsiva */
+}
+
+input#inputDate {
+  border-radius: 2vw; /* Bordas arredondadas responsivas */
+  border-style: none;
+  height: 4vw; /* Altura responsiva */
+  font-size: 1vw; /* Tamanho da fonte responsivo */
+  padding: 2vw; /* Padding responsivo */
+  box-shadow: 0.5vw 0.5vw 2vw rgba(0, 0, 0, 0.3); /* Sombra responsiva */
+}
+
+#taskContainer {
+  max-height: 50vw; /* Limite de altura responsivo */
+  overflow-y: auto; /* Adicionar scroll vertical quando necessário */
+}
+
+#taskModal {
+  margin-top: 30vh;
+}
+
+#taskModal > .modal-content {
+  width: 50%;
+}
+
+#taskModal > .modal-content > button {
+  width: 30%;
+  height: 40px;
+  align-self: center;
+  border-style: none;
+  background-color: rgba(63, 243, 87, 0.662745098);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1070px) {
+  input#inputDate {
+    font-size: 2vh;
+  }
+  #inputTask {
+    font-size: 2vh;
+  }
+}
+#imgAdd {
+  width: 100px;
+}
+
+#cadFom > form {
+  margin-inline: 5%; /* Margem responsiva */
+}
+
+#cadFom {
+  display: flex;
+  flex-direction: column; /* Altera a direção do flex para coluna */
+  padding: 5vw; /* Aumenta o padding para telas menores */
+  width: 90%; /* Largura ajustada */
+  max-width: 900px; /* Largura máxima */
+  height: auto; /* Altura ajustada */
+  align-items: center;
+  justify-content: center;
+  margin: 3vw auto 0 auto; /* Margens responsivas */
+  background-color: rgba(63, 243, 87, 0.662745098);
+  border-radius: 3vw; /* Bordas arredondadas responsivas */
+  box-shadow: 0.5vw 0.5vw 2vw rgba(0, 0, 0, 0.3);
+}
+
+#myForm {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+#cadFom > form > div:nth-child(4) > div,
+#cadFom > form > div:nth-child(5) > button {
+  margin: 2vw auto; /* Centraliza horizontalmente e adiciona espaço entre os itens */
+}
+
+.col-md-4 {
+  width: 300%;
+}
+
+#termosDeUsoButton {
+  border: none;
+  color: blue;
+  text-decoration: underline;
+  background-color: transparent; /* Remova a cor de fundo */
+}
+
+/* Regras de mídia para tornar o formulário mais responsivo em telas menores */
+@media (max-width: 768px) {
+  #cadFom {
+    padding: 10vw; /* Aumenta o padding para telas menores */
+  }
+  #cadFom > form > div:nth-child(4) > div,
+  #cadFom > form > div:nth-child(5) > button {
+    margin: 5vw auto; /* Ajusta a margem para telas menores */
+  }
+  #validationServer03,
+  #validationServer01,
+  #validationServerUsername,
+  #validationServerPassword {
+    width: 100%; /* Largura total */
+  }
+}
+#validationServerUsername {
+  z-index: 1;
+}
+
+#modal {
+  display: none; /* Inicialmente oculto */
+  position: fixed; /* Posicionamento fixo em relação à janela de visualização */
+  top: auto; /* Alinha o topo do modal com o topo da janela de visualização */
+  left: 0; /* Alinha a esquerda do modal com a esquerda da janela de visualização */
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+  z-index: 999; /* Garante que o modal esteja acima de outros elementos */
+  display: flex; /* Usa flexbox para centralizar o conteúdo */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.modal-content {
+  margin: auto;
+  background-color: #fefefe; /* Cor de fundo do modal */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  max-width: 80%; /* Largura máxima do conteúdo do modal */
+  overflow-y: auto; /* Adiciona scroll vertical se o conteúdo for muito longo */
+}
+
+.close {
+  color: #aaa; /* Cor do botão de fechar */
+  float: right; /* Alinha à direita */
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black; /* Cor do botão de fechar ao passar o mouse */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modal {
+  display: none;
+}
+
+#myForm > div:nth-child(4) {
+  height: 120px;
+}
+
+#cadFom > form > div:nth-child(4) > div, #cadFom > form > div:nth-child(5) > button {
+  margin: 0.5vw auto;
+}
+
+body {
+  background-image: linear-gradient(to left, rgb(255, 255, 255), rgb(124, 236, 124));
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */
+
+
+footer{
+  width: 100%;
+}
+
+.footer{
+  text-decoration: none;
+}
+
+#footer_content{
+  background-color:  rgba(63, 243, 87, 0.662745098);
+  text-align: left;
+  padding: 3rem 3.5rem;
+}
+
+#footer_contracts h1{
+  margin-bottom: 0.75rem;
+}
+
+#footer_social_media{
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+
+}
+
+#footer_social_media .footer-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: #f5f5f5;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+
+#footer_social_media .footer-link:hover{
+  opacity: 0.8;
+}
+
+#footer_social_media .footer-link i {
+  font-size: 1.25rem;
+}
+
+#instagram{
+  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook{
+  background-color: #4267b3;
+}
+
+#whatsapp{
+  background-color: #25d366;
+}
+
+#footer_copyrigth{
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+  padding: 1.5rem;
+  font-weight: 100;
+}

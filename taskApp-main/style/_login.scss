@@ -1,0 +1,61 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#loginForm {
+  width: 80%; /* Largura ajustada */
+  max-width: 700px; /* Largura máxima */
+  margin: 200px auto; /* Centralizado vertical e horizontalmente */
+  background-color: $primaryColor;
+  padding: 40px; /* Reduzido para não ocupar muito espaço */
+  border-radius: 30px;
+  box-shadow: 1px 1px 20px;
+  text-align: center; /* Centralizar o texto */
+  
+  
+}
+
+.btn.btn-primary {
+  width: 100%; /* Largura total */
+  margin-top: 20px; /* Espaçamento superior ajustado */
+  background-color: $buttonColor;
+  color: black;
+  border-style: none;
+  
+}
+
+.btn.btn-primary:hover {
+  opacity: 0.7;
+}
+
+#inputEmail3,
+#inputPassword3 {
+  width: 100%; /* Largura total */
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
+  margin-bottom: 20px; /* Espaçamento inferior ajustado */
+
+}
+
+@media (max-width: 768px) {
+  /* Estilos adicionais para telas menores */
+  #loginForm {
+    padding: 20px; /* Reduz o padding para telas menores */
+  }
+
+  .btn.btn-primary {
+    margin-top: 15px; /* Espaçamento superior ajustado */
+  }
+}
+
+#loginForm > div:nth-child(1) > label,
+#loginForm > div:nth-child(2) > label,
+#loginForm > div:nth-child(3) > div > div > label {
+  color: rgb(0, 0, 0);
+}
+
+
+#loginForm > div:nth-child(3) > div > div > label {
+
+  margin-left: -60%;
+}
+

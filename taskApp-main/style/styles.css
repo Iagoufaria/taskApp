@@ -1,0 +1,119 @@
+/* ---- RESET/BASIC STYLING ---- */
+/* Este bloco define estilos básicos de reset e estilos gerais para todos os elementos na página */
+
+/* Define o preenchimento e a margem de todos os elementos como zero, e define o modelo de caixa como border-box para garantir que o preenchimento e a borda não alterem as dimensões do elemento */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão para todos os elementos */
+/* Esconde a barra de rolagem em navegadores específicos */
+/* Para o Internet Explorer e Edge */
+  -ms-overflow-style: none;
+/* Para o Firefox */
+  scrollbar-width: none;
+}
+/* Para navegadores baseados em WebKit, como Chrome e Safari, esconde a barra de rolagem */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---- FORM ---- */
+/* Estilos para o formulário de adição de tarefas */
+
+/* Estilos para o formulário */
+#todo-form {
+  padding: 2rem; /* Adiciona preenchimento interno de 2rem (32px) ao formulário */
+  display: flex; /* Usa o modelo de layout flexível */
+  flex-wrap: wrap; /* Permite que os itens dentro do formulário quebrem para a próxima linha se necessário */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+}
+
+/* Estilos para o campo de entrada */
+#todo-form input {
+  flex: 1; /* Faz com que o campo de entrada ocupe o máximo de espaço disponível */
+  padding: 1rem; /* Adiciona preenchimento interno de 1rem (16px) ao campo de entrada */
+  margin-right: 1rem; /* Define uma margem direita de 1rem (16px) para separar o campo de entrada do botão */
+  border-radius: 0.5rem; /* Adiciona uma borda arredondada de 0.5rem (8px) ao campo de entrada */
+  border: none; /* Remove a borda do campo de entrada */
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25); /* Adiciona uma sombra sutil ao campo de entrada */
+  background: white; /* Define o fundo do campo de entrada como branco */
+  font-size: 1rem; /* Define o tamanho da fonte como 1rem (16px) */
+  font-family: Arial, Helvetica, sans-serif; /* Define a fonte do campo de entrada */
+  outline: none; /* Remove o contorno ao focar no campo de entrada */
+}
+
+/* Estilos para o botão */
+#todo-form button {
+  padding: 1rem 2rem; /* Adiciona preenchimento interno de 1rem (16px) vertical e 2rem (32px) horizontal ao botão */
+  border-radius: 0.5rem; /* Adiciona uma borda arredondada de 0.5rem (8px) ao botão */
+  border: none; /* Remove a borda do botão */
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25); /* Adiciona uma sombra sutil ao botão */
+  background: #87dfc2; /* Define o fundo do botão como uma cor verde claro */
+  color: black; /* Define a cor do texto como preto */
+  font-weight: bold; /* Define a espessura da fonte como negrito */
+  font-size: 1rem; /* Define o tamanho da fonte como 1rem (16px) */
+  font-family: Arial, Helvetica, sans-serif; /* Define a fonte do botão */
+  cursor: pointer; /* Altera o cursor para o formato de mão ao passar o mouse sobre o botão */
+}
+
+/* ---- BOARD ---- */
+/* Estilos para o quadro do Kanban */
+
+/* Estilos para o quadro */
+.board {
+  width: 100%; /* Define a largura do quadro como 100% da largura do contêiner pai */
+  min-height: 100vh; /* Define a altura mínima do quadro como 100% da altura da janela de visualização */
+  padding: 2rem; /* Adiciona preenchimento interno de 2rem (32px) ao quadro */
+  display: flex; /* Usa o modelo de layout flexível */
+  flex-direction: column; /* Alinha os itens verticalmente em coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Estilos para as colunas do Kanban */
+.lanes {
+  display: flex; /* Usa o modelo de layout flexível */
+  justify-content: space-around; /* Distribui uniformemente os itens horizontalmente */
+  gap: 2rem; /* Define um espaçamento de 2rem (32px) entre as colunas */
+  flex-wrap: wrap; /* Permite que as colunas quebrem para a próxima linha se necessário */
+}
+
+/* Estilos para o título das colunas do Kanban */
+.heading {
+  font-size: 1.5rem; /* Define o tamanho da fonte como 1.5rem (24px) */
+  font-weight: bold; /* Define a espessura da fonte como negrito */
+  margin-bottom: 0.5rem; /* Adiciona uma margem inferior de 0.5rem (8px) */
+  text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+/* Estilos para as colunas do Kanban */
+.swim-lane {
+  display: flex; /* Usa o modelo de layout flexível */
+  flex-direction: column; /* Alinha os itens verticalmente em coluna */
+  gap: 1rem; /* Define um espaçamento de 1rem (16px) entre os itens */
+  background: #87dfc2; /* Define o fundo das colunas como uma cor verde claro */
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25); /* Adiciona uma sombra sutil às colunas */
+  padding: 1rem; /* Adiciona preenchimento interno de 1rem (16px) às colunas */
+  border-radius: 0.5rem; /* Adiciona uma borda arredondada de 0.5rem (8px) às colunas */
+  min-width: 225px; /* Define a largura mínima das colunas como 225px */
+}
+
+/* Estilos para as tarefas do Kanban */
+.task {
+  background: white; /* Define o fundo das tarefas como branco */
+  color: black; /* Define a cor do texto como preto */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15); /* Adiciona uma sombra sutil às tarefas */
+  padding: 1rem; /* Adiciona preenchimento interno de 1rem (16px) às tarefas */
+  border-radius: 0.5rem; /* Adiciona uma borda arredondada de 0.5rem (8px) às tarefas */
+  font-size: 1rem; /* Define o tamanho da fonte como 1rem (16px) */
+  font-family: Arial, Helvetica, sans-serif; /* Define a fonte das tarefas */
+  cursor: move; /* Altera o cursor para o formato de mover ao passar o mouse sobre as tarefas */
+}
+
+/* Estilos para quando uma tarefa está sendo arrastada */
+.is-dragging {
+  transform: scale(1.05); /* Aumenta ligeiramente o tamanho da tarefa */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25); /* Adiciona uma sombra mais pronunciada à tarefa */
+  background: rgb(50, 50, 50); /* Define o fundo da tarefa como uma cor cinza mais escura */
+  color: white; /* Define a cor do texto como branco */
+}

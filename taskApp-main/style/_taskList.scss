@@ -1,0 +1,125 @@
+h1 {
+  font-size: 5vw; /* Tamanho da fonte responsivo */
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-bottom: 3vw; /* Espaçamento inferior responsivo */
+  color: rgb(0, 0, 0);
+}
+
+div#listAll {
+  background-color: $primaryColor;
+  margin-top: 2vw; /* Espaçamento superior responsivo */
+  width: 100%; /* Largura ajustada */
+  max-width: 1000px; /* Largura máxima */
+  padding: 5vw; /* Padding responsivo */
+  margin-left: auto;
+  margin-right: auto; 
+  border-radius: 5vw; /* Bordas arredondadas responsivas */
+  text-align: center;
+  box-shadow: 0.5vw 0.5vw 2vw rgba(0, 0, 0, 0.3); /* Sombra responsiva */
+}
+
+#inputTask {
+  margin-left: 3vw; /* Margem esquerda responsiva */
+  margin-top: 3vw; /* Margem superior responsiva */
+  border-style: none;
+  border-radius: 2vw; /* Bordas arredondadas responsivas */
+  width: 50%; /* Largura ajustada */
+  max-width: 1000px; /* Largura máxima */
+  height: 3vw; /* Altura responsiva */
+  font-size: 1vw; /* Tamanho da fonte responsivo */
+  padding: 2vw; /* Padding responsivo */
+  outline-style: none;
+  box-shadow: 0.5vw 0.5vw 2vw rgba(0, 0, 0, 0.3); /* Sombra responsiva */
+}
+
+
+
+#addTaskButton {
+  border: none;
+  border-radius: 50%;
+  background-color: $primaryColor;
+  width: 5vw; /* Largura responsiva */
+  height: 5vw; /* Altura responsiva */
+}
+
+
+
+#detailsButton {
+  border-style: none;
+  height: 50%;
+  margin: 20px;
+
+  padding: 10px;
+  border-radius: 10px;
+}
+
+span {
+  font-size: 2vw; /* Tamanho da fonte responsivo */
+}
+
+li#taskAdd {
+  display: flex;
+  justify-content: space-between;
+  width: 90%; /* Largura ajustada */
+  max-width: 800px; /* Largura máxima */
+  margin-left: auto;
+  margin-right: auto; 
+  margin-top: 3vw; /* Margem superior responsiva */
+  background-color: $secondaryColor;
+  padding: 2vw; /* Padding responsivo */
+  align-items: center;
+  border-radius: 5vw; /* Bordas arredondadas responsivas */
+  box-shadow: 0.5vw 0.5vw 2vw rgba(0, 0, 0, 0.3); /* Sombra responsiva */
+}
+
+input#inputDate {
+  border-radius: 2vw; /* Bordas arredondadas responsivas */
+  border-style: none;
+  height: 4vw; /* Altura responsiva */
+  font-size: 1vw; /* Tamanho da fonte responsivo */
+  padding: 2vw; /* Padding responsivo */
+  box-shadow: 0.5vw 0.5vw 2vw rgba(0, 0, 0, 0.3); /* Sombra responsiva */
+}
+
+#taskContainer {
+  max-height: 50vw; /* Limite de altura responsivo */
+  overflow-y: auto; /* Adicionar scroll vertical quando necessário */
+}
+
+
+#taskModal{
+  margin-top: 30vh;
+}
+
+#taskModal > .modal-content{
+  width: 50%;
+}
+
+#taskModal > .modal-content > button {
+  width: 30%;
+  height: 40px;
+  align-self: center;
+  border-style: none;
+  background-color: $primaryColor;
+  border-radius: 10px;
+  margin-top: 20px;
+
+}
+
+
+@media (max-width: 1070px) {
+  input#inputDate {
+    font-size: 2vh;
+  }
+
+  #inputTask {
+    font-size: 2vh;
+  }
+ 
+}
+
+
+#imgAdd {
+  width: 100px;
+}

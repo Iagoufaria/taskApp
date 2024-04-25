@@ -1,0 +1,120 @@
+#cadFom > form {
+  margin-inline: 5%; /* Margem responsiva */
+}
+
+#cadFom {
+  display: flex;
+  flex-direction: column; /* Altera a direção do flex para coluna */
+  padding: 5vw; /* Aumenta o padding para telas menores */
+  width: 90%; /* Largura ajustada */
+  max-width: 900px; /* Largura máxima */
+  height: auto; /* Altura ajustada */
+  align-items: center;
+  justify-content: center;
+  margin: 3vw auto 0 auto; /* Margens responsivas */
+  background-color: $primaryColor;
+  border-radius: 3vw; /* Bordas arredondadas responsivas */
+  box-shadow: 0.5vw 0.5vw 2vw rgba(0, 0, 0, 0.3);
+}
+
+#myForm {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+
+
+
+
+#cadFom > form > div:nth-child(4) > div,
+#cadFom > form > div:nth-child(5) > button {
+  margin: 2vw auto; /* Centraliza horizontalmente e adiciona espaço entre os itens */
+}
+
+.col-md-4 {
+  width: 300%;
+}
+
+#termosDeUsoButton {
+  border: none;
+  color: blue;
+  text-decoration: underline;
+  background-color: transparent; /* Remova a cor de fundo */
+}
+
+/* Regras de mídia para tornar o formulário mais responsivo em telas menores */
+@media (max-width: 768px) {
+  #cadFom {
+    padding: 10vw; /* Aumenta o padding para telas menores */
+  }
+
+  #cadFom > form > div:nth-child(4) > div,
+  #cadFom > form > div:nth-child(5) > button {
+    margin: 5vw auto; /* Ajusta a margem para telas menores */
+  }
+
+#validationServer03,
+#validationServer01,
+#validationServerUsername,
+#validationServerPassword {
+  width: 100%; /* Largura total */
+  
+}
+}
+
+#validationServerUsername {
+  z-index: 1;
+}
+
+
+#modal {
+  display: none; /* Inicialmente oculto */
+  position: fixed; /* Posicionamento fixo em relação à janela de visualização */
+  top: auto; /* Alinha o topo do modal com o topo da janela de visualização */
+  left: 0; /* Alinha a esquerda do modal com a esquerda da janela de visualização */
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+  z-index: 999; /* Garante que o modal esteja acima de outros elementos */
+  display: flex; /* Usa flexbox para centralizar o conteúdo */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.modal-content {
+  margin: auto;
+  background-color: #fefefe; /* Cor de fundo do modal */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  max-width: 80%; /* Largura máxima do conteúdo do modal */
+  overflow-y: auto; /* Adiciona scroll vertical se o conteúdo for muito longo */
+}
+
+.close {
+  color: #aaa; /* Cor do botão de fechar */
+  float: right; /* Alinha à direita */
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black; /* Cor do botão de fechar ao passar o mouse */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+#modal {
+  display: none;
+}
+
+#myForm > div:nth-child(4){
+  height: 120px;
+}
+
+#cadFom > form > div:nth-child(4) > div, #cadFom > form > div:nth-child(5) > button {
+  margin: 0.5vw auto;
+}
